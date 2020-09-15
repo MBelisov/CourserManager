@@ -61,7 +61,7 @@ namespace CourserManager
 
             // Define a query that returns all Department objects
             // and related Course objects, ordered by name.
-            ObjectQuery<Department> departmentQuery = new ObjectQuery<Department>("From d In schoolContext.Departments.Include(Courses) Order By d.Name Select d", schoolContext);
+            ObjectQuery<Department> departmentQuery = new ObjectQuery<Department>("From d In schoolContext.Departments.Include(Courses) Order By d.Name Select d"); //, schoolContext);
 
             try
             {
@@ -73,7 +73,7 @@ namespace CourserManager
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message)
+                MessageBox.Show(ex.Message);
             }
         }
 
