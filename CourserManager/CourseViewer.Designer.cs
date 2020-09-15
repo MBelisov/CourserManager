@@ -31,6 +31,7 @@
             this.departmentList = new System.Windows.Forms.ComboBox();
             this.closeForm = new System.Windows.Forms.Button();
             this.courseGridView = new System.Windows.Forms.DataGridView();
+            this.saveChanges = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.courseGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,11 +63,22 @@
             this.courseGridView.TabIndex = 2;
             this.courseGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.courseGridView_CellContentClick);
             // 
+            // saveChanges
+            // 
+            this.saveChanges.Location = new System.Drawing.Point(444, 279);
+            this.saveChanges.Name = "saveChanges";
+            this.saveChanges.Size = new System.Drawing.Size(75, 23);
+            this.saveChanges.TabIndex = 3;
+            this.saveChanges.Text = "Update";
+            this.saveChanges.UseVisualStyleBackColor = true;
+            this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
+            // 
             // CourseViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 315);
+            this.Controls.Add(this.saveChanges);
             this.Controls.Add(this.courseGridView);
             this.Controls.Add(this.closeForm);
             this.Controls.Add(this.departmentList);
@@ -83,6 +95,7 @@
         private System.Windows.Forms.ComboBox departmentList;
         private System.Windows.Forms.Button closeForm;
         private System.Windows.Forms.DataGridView courseGridView;
+        private System.Windows.Forms.Button saveChanges;
     }
 }
 

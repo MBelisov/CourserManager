@@ -50,6 +50,7 @@ namespace CourserManager
 
         private void closeForm_Click(object sender, EventArgs e)
         {
+            schoolContext.Dispose();
             this.Close();
         }
 
@@ -79,6 +80,22 @@ namespace CourserManager
         private void courseGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void saveChanges_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Save object changes to the database, 
+                // display a message, and refresh the form.
+                schoolContext.SaveChanges();
+                MessageBox.Show("Changes saved to the database.");
+                this.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
